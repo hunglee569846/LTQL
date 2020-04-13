@@ -6,6 +6,8 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/ckeditor")
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,22 +18,39 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Thể thao HÙNG store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    <li>@Html.ActionLink("Register", "Register", "Account")</li>
+                    <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                    <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+                    <li>@Html.ActionLink("Nhà cung cấp", "Index", "NhaCCs")</li>
+                    <li>@Html.ActionLink("Hàng hóa", "Index", "Hanghoas")</li>
+                    <li>@Html.ActionLink("Mặt Hàng", "Index", "Articles")</li>
+                    <li>@Html.ActionLink("Khách Hàng", "Index", "Khachhangs")</li>
+                    <li>@Html.ActionLink("Chi tiết Nhập", "Index", "Chitietnhaps")</li>
+                    <li>@Html.ActionLink("Phiếu Nhập", "Index", "Phieunhaps")</li>
+                    <li>@Html.ActionLink("Phiếu Xuất", "Index", "Phieuxuats")</li>
+                    <li>@Html.ActionLink("Chi tiết Xuất", "Index", "Chitietxuats")</li>
+                    <li>@Html.ActionLink("Hóa đơn", "Index", "Hoadons")</li>
+                    <li>@Html.ActionLink("Tồn kho", "Index", "NhapXuatTons")</li>
                 </ul>
             </div>
         </div>
     </div>
+    <br />
+    <br />
+    <br />
+    <br />
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Quản lý Bán Hàng - Lê Huy Hùng</p>
         </footer>
     </div>
 

@@ -1,0 +1,35 @@
+﻿@model websiteBANHANG.Models.Phieuxuat
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Phieuxuat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Khachhang.Tenkhachhang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khachhang.Tenkhachhang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngaytao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaytao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Maphieuxuat }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

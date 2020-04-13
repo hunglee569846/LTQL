@@ -1,0 +1,57 @@
+﻿@model websiteBANHANG.Models.Chitietnhap
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Chitietnhap</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>Tên hàng hóa</label>
+            @*@Html.DisplayNameFor(model => model.Hanghoa.Tenhanghoa)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hanghoa.Tenhanghoa)
+        </dd>
+
+        <dt>
+            <label>Mã nhà cung cấp</label>
+            @*@Html.DisplayNameFor(model => model.Phieunhap.MaNCC)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phieunhap.MaNCC)
+        </dd>
+
+        <dt>
+            <label>Số Lượng</label>
+            @*@Html.DisplayNameFor(model => model.Soluong)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluong)
+        </dd>
+
+        <dt>
+            <label>Ngày nhập</label>
+            @*@Html.DisplayNameFor(model => model.Ngaynhap)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaynhap)
+        </dd>
+
+       
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.STT }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

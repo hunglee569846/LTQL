@@ -1,0 +1,64 @@
+﻿@model IEnumerable<websiteBANHANG.Models.Chitietnhap>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <label>Mã phiếu nhập</label>
+            @*@Html.DisplayNameFor(model => model.Maphieunhap)*@
+        </th>
+        <th>
+            <label>Mã nhà cung cấp</label>
+            @*@Html.DisplayNameFor(model => model.MaNCC)*@
+        </th>
+        <th>
+            <label>Tên hàng hóa</label>
+            @*@Html.DisplayNameFor(model => model.Hanghoa.Tenhanghoa)*@
+        </th>
+        <th>
+            <label>Số lượng</label>
+            @*@Html.DisplayNameFor(model => model.Soluong)*@
+        </th>
+        <th>
+            <label>Ngày nhập</label>
+            @*@Html.DisplayNameFor(model => model.Ngaynhap)*@
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maphieunhap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaNCC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hanghoa.Tenhanghoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Soluong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngaynhap)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.STT }) |
+            @Html.ActionLink("Details", "Details", new { id = item.STT }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.STT })
+        </td>
+    </tr>
+}
+
+</table>

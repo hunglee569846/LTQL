@@ -1,0 +1,59 @@
+﻿@model websiteBANHANG.Models.Hanghoa
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hanghoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NhaCC.TenNCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaCC.TenNCC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhapXuatTon.Mahanghoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhapXuatTon.Mahanghoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenhanghoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenhanghoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dongia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dongia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Donvitinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Donvitinh)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Mahanghoa }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

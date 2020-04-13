@@ -1,0 +1,46 @@
+﻿@model IEnumerable<websiteBANHANG.Models.Phieunhap>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NhaCC.MaNCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhaCC.TenNCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngaytao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhaCC.MaNCC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhaCC.TenNCC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngaytao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Maphieunhap }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Maphieunhap }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Maphieunhap })
+        </td>
+    </tr>
+}
+
+</table>
